@@ -1,16 +1,18 @@
-function getMood() {
-    const moods = ["Angry", "Happy", "Silly"];
-    return moods[Math.floor(Math.random() * moods.length)];
+function getNum() {
+    return Math.floor(Math.random() * 10) + 1;
 }
 
-class JSXDemo extends React.Component {
+class NumPicker extends React.Component {
     render() {
+        const num = getNum();
         return (
             <div>
-                <h1>My mood is: {getMood()}</h1>
+                <h1>My number is: {num}</h1>
+                <p> {num === 7 ? "Congrats!" : "Sad"}</p>
+                {num === 5 && <h1>The number "five"</h1>} {/* если в && первое true, то второе выполнится. */}
             </div>
         );
     }
 }
 
-ReactDOM.render(<JSXDemo />, document.getElementById("root"));
+ReactDOM.render(<NumPicker />, document.getElementById("root"));
