@@ -1,11 +1,12 @@
 
 class Hello extends React.Component {
     render() {
-        console.log(this.props.isFunny);
+        let bangs = "!".repeat(this.props.num);
+
         return (
             
             <div>
-                <h2>Hello {this.props.to} from {this.props.from} {this.props.num} times.</h2>
+                <h2>Hello {this.props.to} from {this.props.from}{bangs}</h2>
             </div>
         );
     }
