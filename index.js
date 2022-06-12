@@ -6,7 +6,7 @@ class App extends React.Component {
                 <Machine s1="🍈" s2="🍌" s3="🍒"/>
                 <Machine s1="🍌" s2="🍌" s3="🍌"/>
                 <Machine s1="🍈" s2="🍌" s3="🍈"/>
-                <HobbyList />
+                <Hello to="John" />
             </div>
             
         );
